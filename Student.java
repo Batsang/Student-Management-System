@@ -52,10 +52,4 @@ public class Student {
         this.year = year;
     }
 
-    public List<Course> getAllCourses() {
-        
-    }
-    public List<Course> getRegisteredCourses() {
-        return getRegisteredCourses(this);
-    }
 }
