@@ -52,10 +52,10 @@ public class StudentController {
 
         //get the student from database by id
         Student existingStudent = studentService.getStudentById(id);
-        existingStudent.setId(id);
         existingStudent.setFirstName(student.getFirstName());
         existingStudent.setLastName(student.getLastName());
         existingStudent.setEmail(student.getEmail());
+        existingStudent.setNumber_credits(student.getNumber_credits());
 
         //save updated student object
         studentService.updateStudent(existingStudent);

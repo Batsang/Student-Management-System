@@ -51,9 +51,11 @@ public class CourseController {
     public String updateCourse(@PathVariable Long crn, @ModelAttribute("course") Course course, Model model){
 
         Course existingCourse = courseService.getCourseByCrn(crn);
-        existingCourse.setCrn(crn);
         existingCourse.setCourse_num(course.getCourse_num());
         existingCourse.setDepName(course.getDepName());
+        existingCourse.setCourse_credit(course.getCourse_credit());
+        existingCourse.setTime(course.getTime());
+        existingCourse.setDay(course.getDay());
 
         courseService.updateCourse(existingCourse);
         return "redirect:/courses";

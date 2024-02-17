@@ -24,15 +24,27 @@ public class Student {
     @Column(name = "email",nullable = false)
     private String email;
 
+    @Column(name="number_credits",nullable = false)
+    private int number_credits;
+
+    public int getNumber_credits() {
+        return number_credits;
+    }
+
+    public void setNumber_credits(int number_credits) {
+        this.number_credits = number_credits;
+    }
+
     public Student(){
 
     }
 
-    public Student(String firstName, String lastName, String email) {
+    public Student(String firstName, String lastName, String email, int number_credits) {
         super();
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.number_credits = number_credits;
     }
     public Long getId() {
         return id;

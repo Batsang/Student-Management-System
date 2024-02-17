@@ -41,8 +41,11 @@
                 <thead class="table-dark">
                     <tr>
                         <th>CRN</th>
-                        <th>Course Number</th>
                         <th>Department Name</th>
+                        <th>Course Number</th>
+                        <th>Number of credits</th>
+                        <th>Time</th>
+                        <th>Day</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -52,6 +55,9 @@
                         <td th:text="${course.crn}"></td>
                         <td th:text="${course.depName}"></td>
                         <td th:text="${course.course_num}"></td>
+                        <td th:text="${course.course_credit}"></td>
+                        <td th:text="${course.time}"></td>
+                        <td th:text="${course.day}"></td>
                         <td>
                             <a th:href="@{/courses/edit/{crn}(crn=${course.crn})}" class="btn btn-primary">Update</a>
                             <a th:href="@{/courses/{crn}(crn=${course.crn})}" class="btn btn-danger">Delete</a>
